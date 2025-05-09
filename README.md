@@ -1,1 +1,1 @@
-# word-glance
+# Word-Glance
