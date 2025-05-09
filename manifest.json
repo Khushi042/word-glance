@@ -1,0 +1,28 @@
+{
+    "manifest_version": 3,
+    "name": "Word Glance",
+    "version": "1.0",
+    "description": "A simple dictionary Chrome extension",
+    "permissions": ["activeTab", "scripting", "tabs"],
+    "background": {
+        "service_worker": "./background.js"
+    },
+    "host_permissions": [
+        "<all_urls>"
+    ],
+    "web_accessible_resources": [
+        {
+            "resources": ["./dictionary_data.json"],
+            "matches": ["<all_urls>"]
+        }
+    ],
+    "content_scripts": [
+        {
+            "matches": ["http://*/*", "https://*/*"],
+            "js": ["./content.js"]
+        }
+    ],
+    "content_security_policy": {
+        "extension_pages": "script-src 'self'; object-src 'self'"
+    }
+}

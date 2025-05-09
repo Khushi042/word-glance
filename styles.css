@@ -1,0 +1,24 @@
+body {
+    font-family: Arial, sans-serif;
+    padding: 10px;
+}
+
+#meaningBox {
+    border: 1px solid #ccc;
+    padding: 10px;
+    background-color: #f9f9f9;
+}
+
+h1 {
+    font-size: 18px;
+    margin-bottom: 10px;
+}
+
+body.dark {
+    background-color: #333;
+    color: #fff;
+}
+
+body.dark #meaningBox {
+    border-color: #555;
+}
